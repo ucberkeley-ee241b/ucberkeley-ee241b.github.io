@@ -1,4 +1,10 @@
-Software Overview
+Table of Contents
+===================
+1. [Software Overview](#software)
+2. [Getting Started with EECS Compute Servers](#servers)
+
+
+Software Overview <a name="software"></a>
 ===================
 
 In your future IC design career, you will likely be using software from this (non-exhaustive, not-quite-up-to-date-name-wise) list:
@@ -27,3 +33,6 @@ In your future IC design career, you will likely be using software from this (no
 * **Matlab*** for design analysis
 
 > Minimally, you will be using *'d software for EE241B ASIC labs and projects. 
+
+# Getting Started with EECS Compute Servers <a name="servers"></a>
+===================

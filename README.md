@@ -7,6 +7,7 @@ Table of Contents
 1. [Software Overview](#software)
 2. [Getting Access to EECS Compute Servers](#servers)
 3. [Setting Up Github for Class](#github)
+4. [Git Cheatsheet](#git)
 
 
 Software Overview <a name="software"></a>
@@ -85,3 +86,40 @@ We will be using Github to track lab & project files.
   git clone git@github.com:ucberkeley-ee241b/your-instructional-or-bwrc-user-name.git
   rm -rf your-instructional-or-bwrc-user-name
   ```
+
+Git Cheatsheet <a name="git"></a>
+===================
+
+*(Modified from the CS250 Tutorial)*
+
+| Git Command | Function | 
+| ------------- |:-------------:| 
+| git clone (url) | Pulls a repository @ (url) from a remote server and creates a local version | 
+| git init | Create a new repository in the current directory | 
+| git remote add (origin) (url) | Associates (origin) with a repository @ (url) that you can push to |
+| git remote set-url (origin) (url) | Update the (url) of (origin) |
+| git pull (origin) (master) | Get updates from a branch (master) at the remote repository (origin) |
+| git status | See what files have changed since the last commit. Also shows which branch you're on |  
+| git log | See your commit history | 
+| git diff | See what has changed | 
+| git add (filename) | Stage a file for the next commit. Replace (filename) with **.** to add all updated files |  
+| git commit -m "Message" | Commits staged files |  
+| git push (origin) (master) | Push the latest commit to the (master) branch @ (origin) |  
+| git checkout -- (filename) | Reverts a file to the last commited version |  
+| git clean -dfx (dirname) | Reverts an entire directory to what it looked like @ the last commit |
+| git branch (branch_name) | Create a new branch for tracking your work |
+| git checkout (branch_name) | Switch to (branch_name) or an older commit (hash) for updating |
+| git merge (branch_b) | If your current checked out branch is (branch_name), this merges (branch_b) into (branch_name) |
+| git submodule add (url) | Adds the repo @ (url) into your project |
+| git submodule update --init --recursive | (After pulling) Update repo submodules to latest contents |
+
+> In general, you **do not** want to include generated files in the remote repository *(only source files!)*. To prevent them from cluttering the remote repo, add them to a **.gitignore** file in the top directory of your repo. i.e.: `*.log` will prevent any files with a *.log* extension from being uploaded to Github. You can also specify directories to exclude. 
+
+> Sometimes, when merging branches or pulling from master, you'll run into merge conflicts. They must be fixed by going into the file(s) with merge conflicts and correcting the conflicts.
+
+> For people just starting out with Git, check out these tutorials:
+>   * [Git - The Simple Guide](http://rogerdudler.github.io/git-guide/) - Covers most of the commands you'll need
+>   * [A Tutorial Introduction to Git](https://git-scm.com/docs/gittutorial)
+>   * [CS250 Git Tutorial](https://inst.eecs.berkeley.edu/~cs250/sp17/handouts/tut1-git.pdf)
+
+Git is kind of annoying to get used to. If you're stuck, just ask for help :). 

@@ -1,6 +1,10 @@
+This is the Github organization for **[EE241B](https://github.com/ucberkeley-ee241b)** @ UC Berkeley. 
+
 > **Warning: Do not publicly share lab/project files online! Tool-related Makefiles and tcl scripts are proprietary!**
 
 > Post questions & start discussions on **[Piazza](https://piazza.com/class/ixtn162b6t13f3)**! FAQs from particularly useful discussions will be compiled in this Github repo. 
+
+---
 
 Table of Contents
 ===================
@@ -9,7 +13,9 @@ Table of Contents
 3. [Setting Up Github for Class](#github)
 4. [Git Cheatsheet](#git)
 5. [NoMachine for Remote Access](#nomachine)
+6. [Getting Started with the Tools](#sourceme)
 
+---
 
 Software Overview <a name="software"></a>
 ===================
@@ -36,10 +42,14 @@ In your future IC design career, you will likely be using software from this *(n
   * **nmLVS** for consistency checking between layout/schematic
   * **nmDRC** for layout design rule checks 
   * **xRC** for parasitic extraction
-* **HSpice*** for transistor characterization
+* **HSpice*** for transistor characterization ([Simulation & Analysis Guide](https://cseweb.ucsd.edu/classes/wi10/cse241a/assign/hspice_sa.pdf), [Commands & Control Options](https://cseweb.ucsd.edu/classes/wi10/cse241a/assign/hspice_cmdref.pdf))
 * **Matlab*** for design analysis
 
 > Minimally, you will be using *'d software for EE241B ASIC labs and projects. If you're running into issues with the software required for this class, try consulting **[this page](http://inst.eecs.berkeley.edu/software.html)** for help on a given tool.
+
+For homeworks and class projects, we will be using the 32nm educational library from Synopsys. 
+
+---
 
 Getting Access to EECS Compute Servers <a name="servers"></a>
 ===================
@@ -66,6 +76,8 @@ If you're on Windows, download [PuTTY](http://www.chiark.greenend.org.uk/~sgtath
 
 > When logged in, you can use `top` to check how overloaded a machine is. If you think your session is running slowly, because the machine is being overused, consider switching to a different machine.
 
+---
+
 Setting Up Github for Class <a name="github"></a>
 ===================
 
@@ -84,6 +96,10 @@ We will be using Github to track lab & project files.
 4. Check to make sure that you setup everything correctly by cloning your (currently empty) private repo into your directory of choice. If it works, you're good to go! Just delete the repo from your directory for now.
   `git clone git@github.com:ucberkeley-ee241b/your-instructional-or-bwrc-user-name.git`
   `rm -rf your-instructional-or-bwrc-user-name`
+
+> Note: When using SSH authentication, you need to clone/pull from **git@github.com**, and not https://github.com!
+
+---
 
 Git Cheatsheet <a name="git"></a>
 ===================
@@ -111,7 +127,7 @@ Git Cheatsheet <a name="git"></a>
 | git submodule add (url) | Adds the repo @ (url) into your project |
 | git submodule update --init --recursive | (After pulling) Update repo submodules to latest contents |
 
-> In general, you **do not** want to include generated files in the remote repository *(only source files!)*. To prevent them from cluttering the remote repo, add them to a **.gitignore** file in the top directory of your repo. i.e.: `*.log` will prevent any files with a *.log* extension from being uploaded to Github. You can also specify directories to exclude. 
+> In general, you **do not** want to include generated files (log files, etc.) in the remote repository *(only source files!)*. To prevent them from cluttering the remote repo, add them to a **.gitignore** file in the top directory of your repo. i.e.: `*.log` will prevent any files with a *.log* extension from being uploaded to Github. You can also specify directories to exclude. 
 
 > Sometimes, when merging branches or pulling from master, you'll run into merge conflicts. They must be fixed by going into the file(s) with merge conflicts and correcting the conflicts.
 
@@ -121,6 +137,8 @@ Git Cheatsheet <a name="git"></a>
 >   * [CS250 Git Tutorial](https://inst.eecs.berkeley.edu/~cs250/sp17/handouts/tut1-git.pdf)
 
 Git is kind of annoying to get used to. If you're stuck, just ask for help :). 
+
+---
 
 NoMachine for Remote Access <a name="nomachine"></a>
 ===================
@@ -158,4 +176,15 @@ Instructions (from CS250) are found below:
 
 **For BWRC Account Holders**
 
-Search the Wiki for "NoMachine" to get instructions on how to get started. 
+Search the BWRC Wiki for "NoMachine" to get instructions on how to get started. Opening up terminal, etc. still apply, obviously.
+
+---
+
+Getting Started with the Tools <a name="sourceme"></a>
+===================
+
+Although you could probably get by in this class without looking at much more than the Makefiles associated with each lab, it's in your best interest to also look over the scripts in the (private to students) **[VLSI repo](https://github.com/ucberkeley-ee241b/cs250-vlsi-scripts)**. Feel free to ask questions about what you see! That way, when you're taping out your first digital chip, you'll have a better understanding of what parts of the scripts do what and what parts need to be customized... Even if you're doing a mostly analog chip, if you'll need a long scan chain or memory to store in ADC bits, you might end up using a digital flow to generate your logic. :)
+
+> Note that the aforementioned *VLSI repo* isn't directly used in your labs -- that repo was adapted from CS250 (originally for use with a RISCV processor called rocket-chip). However, the scripts you'll be using in your labs are 95% the same. 
+
+[To be continued... with how to setup .bashrc, etc.]

@@ -76,17 +76,14 @@ We will be using Github to track lab & project files.
 3. After I've added you to the organization, setup automatic authentication with SSH. 
   1. SSH into one of the instructional compute servers (or a BWRC server).
   2. *(If you don't already have one)* Generate a new **SSH key** via (detailed) instructions **[here](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)**. *Note: Your e-mail should be the one you use on Github**.
-```
-ssh-keygen -t rsa -b 4096 -C "your_email_on_github@example.com"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa
-```
+    `ssh-keygen -t rsa -b 4096 -C "your_email_on_github@example.com"`
+    [Press enter to use defaults.]
+    `eval "$(ssh-agent -s)"`
+    `ssh-add ~/.ssh/id_rsa`
   3. Add your SSH key to your **Github** account via instructions **[here](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)**. You can get your SSH key with `cat ~/.ssh/id_rsa.pub`, and then copy & paste it into Github. 
 4. Check to make sure that you setup everything correctly by cloning your (currently empty) private repo into your directory of choice. If it works, you're good to go! Just delete the repo from your directory for now.
-```
-git clone git@github.com:ucberkeley-ee241b/your-instructional-or-bwrc-user-name.git
-rm -rf your-instructional-or-bwrc-user-name
-```
+  `git clone git@github.com:ucberkeley-ee241b/your-instructional-or-bwrc-user-name.git`
+  `rm -rf your-instructional-or-bwrc-user-name`
 
 Git Cheatsheet <a name="git"></a>
 ===================

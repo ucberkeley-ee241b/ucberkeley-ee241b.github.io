@@ -8,6 +8,7 @@ Table of Contents
 2. [Getting Access to EECS Compute Servers](#servers)
 3. [Setting Up Github for Class](#github)
 4. [Git Cheatsheet](#git)
+5. [NoMachine for Remote Access](#nomachine)
 
 
 Software Overview <a name="software"></a>
@@ -43,9 +44,9 @@ In your future IC design career, you will likely be using software from this *(n
 Getting Access to EECS Compute Servers <a name="servers"></a>
 ===================
 
-> Note: For students with BWRC accounts, consider doing your work on the BWRC compute servers *(You'll have access to all of the same tools!)* to lighten the load on instructional machines.
+> Note: For students with BWRC accounts, consider doing your work on the BWRC compute servers *(You'll have access to all of the same tools!)* to lighten the load on instructional machines. You know which servers you can log in to. ;)
 
-Students who need instructional accounts for the semester (and beyond) can acquire them by following the instrucions on **[this page](https://inst.eecs.berkeley.edu/connecting.html)**.
+Students who need instructional accounts for the semester (and beyond) can acquire them by following the instructions on **[this page](https://inst.eecs.berkeley.edu/connecting.html)**.
 
 To use the required software for this class, use your instructional account username/password to log in to one of the following Linux machines:
 
@@ -61,7 +62,7 @@ To use the required software for this class, use your instructional account user
 **Ex:** `ssh -X yourusername@hpse-9.eecs.berkeley.edu`
 
 
-If you're on Windows, download [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html), and start an **ssh** session with X11 forwarding enabled, and use *yourusername@hpse-9.eecs.berkeley.edu* for the host. 
+If you're on Windows, download [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html), and start an **ssh** session with X11 forwarding enabled, and use *yourusername@hpse-9.eecs.berkeley.edu* for the host. If you're running into issues, refer back to detailed instructions **[here](https://inst.eecs.berkeley.edu/connecting.html)**.
 
 > You can use `top` to check how overloaded a machine is. If you think your session is running slowly, because the machine is being overused, consider switching to a different machine.
 
@@ -74,7 +75,7 @@ We will be using Github to track lab & project files.
 2. **E-mail** me ([myfirst.lastname]@eecs.berkeley.edu) your **instructional account** username and **Github** username. I will then create a private repo (the name will be your instructional account or BWRC username) for you in the **ucberkeley-ee241b** organization. This is where you will push all of your lab/project files. 
 3. After I've added you to the organization, setup automatic authentication with SSH. 
   1. SSH into one of the instructional compute servers (or a BWRC server).
-  2. *(If you don't already have one)* Generate a new **SSH key** via (detailed) instructions **[here](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)**. *Note: Your e-mail should be the one you use on Github**. 
+  2. *(If you don't already have one)* Generate a new **SSH key** via (detailed) instructions **[here](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)**. *Note: Your e-mail should be the one you use on Github**.
     ```
     ssh-keygen -t rsa -b 4096 -C "your_email_on_github@example.com"
     eval "$(ssh-agent -s)"
@@ -123,3 +124,38 @@ Git Cheatsheet <a name="git"></a>
 >   * [CS250 Git Tutorial](https://inst.eecs.berkeley.edu/~cs250/sp17/handouts/tut1-git.pdf)
 
 Git is kind of annoying to get used to. If you're stuck, just ask for help :). 
+
+NoMachine for Remote Access <a name="nomachine"></a>
+===================
+
+If you're trying to ssh (+ X11 forward) into one of the compute servers remotely, interacting with any GUIs (= most apps used in the class) will be painfully slow (~1s response time). Instead, you might want to consider running GUI apps with NoMachine. 
+
+
+**For Instructional Account Holders**
+
+Instructions (from CS250) are found below:
+
+1. Download [NoMachine](http://www.nomachine.com/download-beta.php).
+2. Click through the welcome/intro screens, then click "Add a computer".
+3. Name the connection and set the protocol as SSH.
+4. For "Host", enter any of the instructional server addresses listed above.
+5. Click "Advanced", and select "Use the NoMachine login".
+6. Check the box marked "Use an alternate server key", then open the file browser and select the key for the **hpse** instructional machines, which can be downloaded **[here](http://inst.eecs.berkeley.edu/pub/nxkeys/hpse.client.id_dsa.key)**. 
+7. If a message appears asking about server authenticity, click "Continue".
+8. Log in with your instructional account username and password.
+9. Click "New Virtual Desktop", and create a new GNOME virtual desktop.
+10. You should now be logged into the compute server. To open up a terminal window once you've connected:
+  * On the top menu bar, click on Applications - Accessories - Terminal.
+  * You can drag the Terminal icon from the drop down menu to a blank spot on the menu bar to create a shortcut.
+11. To log out, simply close the NoMachine window. You will see a prompt to either suspend or terminate your session. 
+
+> Please make a habit of terminating your NX sessions when you are done working to conserve memory on the servers.
+
+> If you are having issues with NoMachine, you can try other (older) NoMachine clients that may work better on your personal machine:
+>   * [OpenNx](http://opennx.net/download.html)
+>   * [NX Client](http://www.nomachine.com/download.php) - will not work on Mac OS 10.7 or later
+> In addition, instructional computing maintains a help document for NX that can be found at [here(https://inst.eecs.berkeley.edu/cgi-bin/pub.cgi?file=nx.help).
+
+**For BWRC Account Holders**
+
+Search the Wiki for "NoMachine" to get instructions on how to get started. 

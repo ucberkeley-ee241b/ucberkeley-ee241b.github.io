@@ -72,21 +72,21 @@ Setting Up Github for Class <a name="github"></a>
 We will be using Github to track lab & project files.
 
 1. If you don't already have one, sign up for a **[Github account](https://github.com)**. 
-2. **E-mail** me ([myfirst.lastname]@eecs.berkeley.edu) your **instructional account** username and **Github** username. I will then create a private repo (the name will be your instructional account or BWRC username) for you in the **ucberkeley-ee241b** organization. This is where you will push all of your lab/project files. 
+2. **E-mail** me ([myfirst.lastname]@eecs.berkeley.edu) your **instructional account** username and **Github** username. I will then create a private repo (the name will be your instructional account or BWRC username) for you in the **[ucberkeley-ee241b](https://github.com/ucberkeley-ee241b)** organization. This is where you will push all of your lab/project files. 
 3. After I've added you to the organization, setup automatic authentication with SSH. 
   1. SSH into one of the instructional compute servers (or a BWRC server).
   2. *(If you don't already have one)* Generate a new **SSH key** via (detailed) instructions **[here](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)**. *Note: Your e-mail should be the one you use on Github**.
-    ```
-    ssh-keygen -t rsa -b 4096 -C "your_email_on_github@example.com"
-    eval "$(ssh-agent -s)"
-    ssh-add ~/.ssh/id_rsa
-    ```
+```
+ssh-keygen -t rsa -b 4096 -C "your_email_on_github@example.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+```
   3. Add your SSH key to your **Github** account via instructions **[here](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)**. You can get your SSH key with `cat ~/.ssh/id_rsa.pub`, and then copy & paste it into Github. 
 4. Check to make sure that you setup everything correctly by cloning your (currently empty) private repo into your directory of choice. If it works, you're good to go! Just delete the repo from your directory for now.
-  ```
-  git clone git@github.com:ucberkeley-ee241b/your-instructional-or-bwrc-user-name.git
-  rm -rf your-instructional-or-bwrc-user-name
-  ```
+```
+git clone git@github.com:ucberkeley-ee241b/your-instructional-or-bwrc-user-name.git
+rm -rf your-instructional-or-bwrc-user-name
+```
 
 Git Cheatsheet <a name="git"></a>
 ===================
@@ -130,6 +130,7 @@ NoMachine for Remote Access <a name="nomachine"></a>
 
 If you're trying to ssh (+ X11 forward) into one of the compute servers remotely, interacting with any GUIs (= most apps used in the class) will be painfully slow (~1s response time). Instead, you might want to consider running GUI apps with NoMachine. 
 
+---
 
 **For Instructional Account Holders**
 
@@ -149,12 +150,14 @@ Instructions (from CS250) are found below:
   * You can drag the Terminal icon from the drop down menu to a blank spot on the menu bar to create a shortcut.
 11. To log out, simply close the NoMachine window. You will see a prompt to either suspend or terminate your session. 
 
-> Please make a habit of terminating your NX sessions when you are done working to conserve memory on the servers.
+> *Please make a habit of terminating your NX sessions when you are done working to conserve memory on the servers.*
 
 > If you are having issues with NoMachine, you can try other (older) NoMachine clients that may work better on your personal machine:
 >   * [OpenNx](http://opennx.net/download.html)
 >   * [NX Client](http://www.nomachine.com/download.php) - will not work on Mac OS 10.7 or later
 > In addition, instructional computing maintains a help document for NX that can be found at [here(https://inst.eecs.berkeley.edu/cgi-bin/pub.cgi?file=nx.help).
+
+---
 
 **For BWRC Account Holders**
 

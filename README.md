@@ -39,7 +39,7 @@ In your future IC design career, you will likely be using software from this *(n
 * **HSpice*** for transistor characterization
 * **Matlab*** for design analysis
 
-> Minimally, you will be using *'d software for EE241B ASIC labs and projects. 
+> Minimally, you will be using *'d software for EE241B ASIC labs and projects. If you're running into issues with the software required for this class, try consulting **[this page](http://inst.eecs.berkeley.edu/software.html)** for help on a given tool.
 
 Getting Access to EECS Compute Servers <a name="servers"></a>
 ===================
@@ -64,7 +64,7 @@ To use the required software for this class, use your instructional account user
 
 If you're on Windows, download [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html), and start an **ssh** session with X11 forwarding enabled, and use *yourusername@hpse-9.eecs.berkeley.edu* for the host. If you're running into issues, refer back to detailed instructions **[here](https://inst.eecs.berkeley.edu/connecting.html)**.
 
-> You can use `top` to check how overloaded a machine is. If you think your session is running slowly, because the machine is being overused, consider switching to a different machine.
+> When logged in, you can use `top` to check how overloaded a machine is. If you think your session is running slowly, because the machine is being overused, consider switching to a different machine.
 
 Setting Up Github for Class <a name="github"></a>
 ===================

@@ -94,7 +94,7 @@ Git Cheatsheet <a name="git"></a>
 *(Modified from the CS250 Tutorial)*
 
 | Git Command | Function | 
-| ------------- |:-------------:| 
+| ------------- | ------------- | 
 | git clone (url) | Pulls a repository @ (url) from a remote server and creates a local version | 
 | git init | Create a new repository in the current directory | 
 | git remote add (origin) (url) | Associates (origin) with a repository @ (url) that you can push to |

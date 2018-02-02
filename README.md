@@ -12,7 +12,7 @@ Table of Contents
 2. [Getting Access to EECS Compute Servers](#servers)
 3. [Setting Up Github for Class](#github)
 4. [Git Cheatsheet](#git)
-5. [NoMachine for Remote Access](#nomachine)
+5. [X2Go for Remote Access](#x2go)
 6. [Getting Started with the Tools](#sourceme)
 
 ---
@@ -140,43 +140,27 @@ Git is kind of annoying to get used to. If you're stuck, just ask for help :).
 
 ---
 
-NoMachine for Remote Access <a name="nomachine"></a>
+X2Go for Remote Access <a name="x2go"></a>
 ===================
 
-If you're trying to ssh (+ X11 forward) into one of the compute servers remotely, interacting with any GUIs (= most apps used in the class) will be painfully slow (~1s response time). Instead, you might want to consider running GUI apps with NoMachine. 
+If you're trying to ssh (+ X11 forward) into one of the compute servers remotely, interacting with any GUIs (= most apps used in the class) will be painfully slow (~1s response time). Instead, you might want to consider running GUI apps with X2Go. In previous incarnations of this class, NoMachine was used, but instructional servers have swapped over to X2Go. 
 
----
+Instructions are found below:
 
-**For Instructional Account Holders**
-
-Instructions (from CS250) are found below:
-
-1. Download [NoMachine](http://www.nomachine.com/download-beta.php).
-2. Click through the welcome/intro screens, then click "Add a computer".
-3. Name the connection and set the protocol as SSH.
-4. For "Host", enter any of the instructional server addresses listed above.
-5. Click "Advanced", and select "Use the NoMachine login".
-6. Check the box marked "Use an alternate server key", then open the file browser and select the key for the **hpse** instructional machines, which can be downloaded **[here](http://inst.eecs.berkeley.edu/pub/nxkeys/hpse.client.id_dsa.key)**. 
-7. If a message appears asking about server authenticity, click "Continue".
-8. Log in with your instructional account username and password.
-9. Click "New Virtual Desktop", and create a new GNOME virtual desktop.
-10. You should now be logged into the compute server. To open up a terminal window once you've connected:
-  * On the top menu bar, click on Applications - Accessories - Terminal.
-  * You can drag the Terminal icon from the drop down menu to a blank spot on the menu bar to create a shortcut.
-11. To log out, simply close the NoMachine window. You will see a prompt to either suspend or terminate your session. 
-
-> *Please make a habit of terminating your NX sessions when you are done working to conserve memory on the servers.*
-
-> If you are having issues with NoMachine, you can try other (older) NoMachine clients that may work better on your personal machine:
->   * [OpenNx](http://opennx.net/download.html)
->   * [NX Client](http://www.nomachine.com/download.php) - will not work on Mac OS 10.7 or later
-> In addition, instructional computing maintains a help document for NX that can be found at [here(https://inst.eecs.berkeley.edu/cgi-bin/pub.cgi?file=nx.help).
-
----
+1. Download [X2Go](https://wiki.x2go.org/doku.php/download:start)
+2. Click through any welcome/intro screen, then click "New Session"
+3. Name the session, and then set the host to be the server you wish to connect to. This should be one of the hpse servers (hpse-9.eecs.berkeley.edu through hpse-15.eecs.berkeley.edu). Also, set the login field to your username - this should be your inst username.
+4. Modify the session type to your graphical interface of choice (KDE, GNOME, etc.)
+5. In the "Connection" tab, you can set various image quality settings.
+6. Click on the "Input/Output" tab. Here you can set various display settings, such as the resolution. We recommend you set "Bidrectional copy and paste" under the "Clipboard mode" section if you want to copy and paste between your machine and the x2go setting.
+7. Hit OK once this is all set. Your new session should appear on the right side of your x2go window.
+8. Click that session. You should be prompted to enter your password. Once this is done, press OK.
+9. You should now be logged into the remote server. To open up a terminal, right-click the desktop and click "Open in Terminal" (tested for GNOME).
+10. To log out, you can simply close the X2Go session window, or you can go to the manager window and click the "Suspend" button (this looks like a pause symbol). Your session will persist, so anything open when you suspend the session will be there when you log back in. If you want to terminate the session, press the "Terminate" button (which looks like a power on/off button). Since these are shared servers, you may want to terminate your session just to free up some memory for other users.
 
 **For BWRC Account Holders**
 
-Search the BWRC Wiki for "NoMachine" to get instructions on how to get started. Opening up terminal, etc. still apply, obviously.
+Search the BWRC Wiki for "X2Go" to get instructions on how to get started. Opening up terminal, etc. still apply, obviously. You can also use other programs such as NoMachine and VNC.
 
 ---
 

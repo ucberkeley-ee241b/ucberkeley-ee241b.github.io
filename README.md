@@ -86,7 +86,7 @@ We will be using Github to track lab & project files.
 1. If you don't already have one, sign up for a **[Github account](https://github.com)**. 
 2. **E-mail** me ([myfirst.lastname]@eecs.berkeley.edu) your **instructional account** username and **Github** username. I will then create a private repo (the name will be your instructional account or BWRC username) for you in the **[ucberkeley-ee241b](https://github.com/ucberkeley-ee241b)** organization. This is where you will push all of your lab/project files. 
 3. After I've added you to the organization, setup automatic authentication with SSH. 
-  1. SSH into one of the instructional compute servers (or a BWRC server).
+  1. SSH into one of the instructional compute servers (or a BWRC server), or connect with a remote connection (x2go) and open a terminal.
   2. *(If you don't already have one)* Generate a new **SSH key** via (detailed) instructions **[here](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)**. *Note: Your e-mail should be the one you use on Github**.
     `ssh-keygen -t rsa -b 4096 -C "your_email_on_github@example.com"`
     [Press enter to use defaults.]

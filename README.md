@@ -30,7 +30,7 @@ In your future IC design career, you will likely be using software from this *(n
   * **Liberty NXC*** for standard cell library characterization (Liberty file .lib generation)
   * **Library Compiler*** for creating standard cell libraries (Milkyway files) 
   * **Formality** for formal verification
-  * **Hercules***
+  * ~~Hercules~~ **IC Validator***
     * **DRC** for layout design rule checks
     * **LVS** for consistency checking between layout/schematic
   * **StarRC*** for parasitic extraction
